@@ -43,37 +43,72 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'text',
-        html: '<h2>Naslov sekcije</h2><p>Ovo je primer uvodnog teksta. Ovde možete opisati temu blog posta. Tekst može biti kratak ili detaljan, zavisno od vaših potreba.</p><p>Možete dodati više paragrafa i oblikovati tekst HTML tagovima.</p>'
+        html: '<h2>Uvod</h2><p>Ovo je primer uvodnog teksta. Ovde možete opisati temu blog posta. Tekst može biti kratak ili detaljan, zavisno od vaših potreba.</p><p>Možete dodati više paragrafa i oblikovati tekst HTML tagovima kao što su <strong>bold</strong>, <em>italic</em>, ili <u>underline</u>.</p>'
       },
       {
         type: 'image',
         src: slika777Url,
         srcset: slika777,
-        alt: 'Opis slike',
-        caption: 'Opis ispod slike - opcionalno'
+        alt: 'Primer slike',
+        caption: 'Opis ispod slike - dodajte detalje o slici'
       },
       {
         type: 'text',
-        html: '<h2>Druga sekcija</h2><p>Nastavite sa tekstom nakon slike. Možete dodavati više sekcija sa naslovima i paragrafima.</p>'
+        html: '<h2>Osnovna sekcija sa tekstom</h2><p>Nastavite sa tekstom nakon slike. Možete dodavati više sekcija sa naslovima i paragrafima.</p><ul><li>Lista sa tačkama</li><li>Druga stavka liste</li><li>Treća stavka</li></ul><p>Možete koristiti i numerisane liste:</p><ol><li>Prva stavka</li><li>Druga stavka</li><li>Treća stavka</li></ol>'
       },
       {
         type: 'quote',
-        quoteText: 'Ovo je primer citata. Možete dodati mudre reči ili izjave koje se odnose na temu.',
+        quoteText: 'Ovo je primer inspirativnog citata. Koristite citate da naglasite važne misli ili izjave relevantne za temu.',
         quoteAuthor: 'Ime autora citata'
       },
       {
         type: 'text',
-        html: '<h2>Video sekcija (opciono)</h2><p>Ispod možete dodati video sa YouTube ili Vimeo platforme.</p>'
+        html: '<h2>Dodatna slika sa opisom</h2><p>Možete dodati više slika kroz post. Svaka slika može imati svoj caption koji pruža dodatni kontekst.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko1Url,
+        srcset: rimsko1,
+        alt: 'Druga primer slika',
+        caption: 'Svaka slika može imati jedinstven opis'
+      },
+      {
+        type: 'text',
+        html: '<h2>Sekcija sa formatiranim tekstom</h2><p>Koristite različite HTML tagove za formatiranje:</p><blockquote>Ovo je blockquote - možete ga koristiti za isticanje važnih informacija ili citata unutar teksta.</blockquote><p>Možete dodati i <a href="https://example.com" target="_blank">linkove ka eksternim stranicama</a>.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Drugi primer citata. Možete dodati više citata kroz post za različite sekcije.',
+        quoteAuthor: 'Drugi autor'
+      },
+      {
+        type: 'text',
+        html: '<h2>Video sadržaj</h2><p>Možete uključiti YouTube ili Vimeo video kako biste obogatili sadržaj. Jednostavno zamenite URL sa vašim video linkom.</p>'
       },
       {
         type: 'video',
         videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
         videoProvider: 'youtube',
-        caption: 'Opis videa - opcionalno'
+        caption: 'Primer YouTube videa - zamenite sa pravim video linkom'
       },
       {
         type: 'text',
-        html: '<h2>Zaključak</h2><p>Završite post sa zaključkom ili pozivom na akciju.</p><p><strong>Napomena:</strong> Jednostavno kopirajte ovaj post i prilagodite sve vrednosti (naslov, datum, kategoriju, sadržaj blokova).</p>'
+        html: '<h2>Još jedna slika</h2><p>Slike i video mogu se kombinovati kroz ceo post za dinamičan sadržaj.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko2Url,
+        srcset: rimsko2,
+        alt: 'Treća primer slika',
+        caption: 'Dodajte onoliko slika koliko je potrebno za vašu priču'
+      },
+      {
+        type: 'text',
+        html: '<h2>Tabele (opciono)</h2><p>Možete dodati i tabele koristeći HTML:</p><table style="width:100%; border-collapse: collapse;"><thead><tr><th style="border: 1px solid #ddd; padding: 8px;">Kolona 1</th><th style="border: 1px solid #ddd; padding: 8px;">Kolona 2</th><th style="border: 1px solid #ddd; padding: 8px;">Kolona 3</th></tr></thead><tbody><tr><td style="border: 1px solid #ddd; padding: 8px;">Podatak 1</td><td style="border: 1px solid #ddd; padding: 8px;">Podatak 2</td><td style="border: 1px solid #ddd; padding: 8px;">Podatak 3</td></tr></tbody></table>'
+      },
+      {
+        type: 'text',
+        html: '<h2>Zaključak</h2><p>Završite post sa zaključkom ili pozivom na akciju.</p><p><strong>Kako koristiti ovaj šablon:</strong></p><ol><li>Kopirajte ceo objekat blog posta</li><li>Promenite ID (mora biti jedinstven broj)</li><li>Ažurirajte title, excerpt, author, date i category</li><li>Zamenite imageUrl i imageSrcSet sa vašim slikama</li><li>Prilagodite content blokove - dodajte, uklonite ili izmenite ih</li><li>Sačuvajte fajl i vaš post je spreman!</li></ol>'
       }
     ],
   },
