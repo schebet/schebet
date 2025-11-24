@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-village.jpg";
+import heroImage from "@/assets/hero-village.jpg?format=webp&quality=85";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 const categories = ["Istorija", "Kultura", "Ljudi", "Priroda", "Gastronomija", "Arhitektura"];
 export const Hero = ({

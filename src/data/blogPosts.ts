@@ -1,6 +1,6 @@
-import slika777 from "@/assets/photos/777.JPG";
-import rimsko1 from "@/assets/photos/rimsko_1.jpeg";
-import rimsko2 from "@/assets/photos/rimsko_2.jpeg";
+import slika777 from "@/assets/photos/777.JPG?format=webp&quality=85";
+import rimsko1 from "@/assets/photos/rimsko_1.jpeg?format=webp&quality=85";
+import rimsko2 from "@/assets/photos/rimsko_2.jpeg?format=webp&quality=85";
 
 export interface BlogPost {
   id: number;
