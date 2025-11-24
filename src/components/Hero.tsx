@@ -3,25 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroImageSrcSet from "@/assets/hero-village.jpg?w=640;768;1024;1280;1920&format=webp&quality=85&as=srcset";
 import heroImageUrl from "@/assets/hero-village.jpg?w=1920&format=webp&quality=85";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { getHeroSizes } from "@/lib/imageUtils";
-const categories = ["Istorija", "Kultura", "Ljudi", "Priroda", "Gastronomija", "Arhitektura"];
-export const Hero = ({
-  onCategorySelect
-}: {
-  onCategorySelect?: (category: string) => void;
-}) => {
+export const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [open, setOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const handleCategoryClick = (category: string) => {
-    onCategorySelect?.(category);
-    setOpen(false);
-    // Scroll to blog section
+  const handleExploreClick = () => {
     document.getElementById("blog")?.scrollIntoView({
       behavior: "smooth"
     });
@@ -51,21 +41,13 @@ export const Hero = ({
             Dokumentarni sajt o selu — istorija, kultura, ljudi i priče našeg sela
           </p>
           <div className="flex flex-col gap-4 items-center justify-center">
-            <Popover open={open} onOpenChange={setOpen}>
-              <PopoverTrigger asChild>
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
-                  Istražite priče
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-64 p-3 bg-background/5 backdrop-blur-md border-background/20">
-                <div className="flex flex-wrap gap-2">
-                  {categories.map(category => <Button key={category} variant="outline" onClick={() => handleCategoryClick(category)} className="bg-background/5 backdrop-blur-sm border-foreground/20 text-foreground hover:bg-background/10 hover:border-foreground/30">
-                      {category}
-                    </Button>)}
-                </div>
-              </PopoverContent>
-            </Popover>
-            
+            <Button 
+              size="lg" 
+              onClick={handleExploreClick}
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow"
+            >
+              Istražite priče
+            </Button>
           </div>
         </div>
       </div>
