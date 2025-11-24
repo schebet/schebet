@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-village.jpg?format=webp&quality=85";
+import heroImageSrcSet from "@/assets/hero-village.jpg?w=640;768;1024;1280;1920&format=webp&quality=85&as=srcset";
+import heroImageUrl from "@/assets/hero-village.jpg?w=1920&format=webp&quality=85";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { getHeroSizes } from "@/lib/imageUtils";
 const categories = ["Istorija", "Kultura", "Ljudi", "Priroda", "Gastronomija", "Arhitektura"];
 export const Hero = ({
   onCategorySelect
@@ -25,11 +27,17 @@ export const Hero = ({
     });
   };
   return <section id="home" className="relative h-screen overflow-hidden">
-      {/* Parallax Background */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{
-      backgroundImage: `url(${heroImage})`,
+      {/* Parallax Background with picture element for responsive images */}
+      <div className="absolute inset-0 overflow-hidden" style={{
       transform: `translateY(${scrollY * 0.5}px)`
     }}>
+        <img 
+          src={heroImageUrl}
+          srcSet={heroImageSrcSet}
+          sizes={getHeroSizes()}
+          alt="Selo Šebet"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
 

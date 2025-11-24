@@ -1,6 +1,9 @@
-import slika777 from "@/assets/photos/777.JPG?format=webp&quality=85";
-import rimsko1 from "@/assets/photos/rimsko_1.jpeg?format=webp&quality=85";
-import rimsko2 from "@/assets/photos/rimsko_2.jpeg?format=webp&quality=85";
+import slika777 from "@/assets/photos/777.JPG?w=640;768;1024;1280;1920&format=webp&quality=85&as=srcset";
+import slika777Url from "@/assets/photos/777.JPG?w=1024&format=webp&quality=85";
+import rimsko1 from "@/assets/photos/rimsko_1.jpeg?w=640;768;1024;1280;1920&format=webp&quality=85&as=srcset";
+import rimsko1Url from "@/assets/photos/rimsko_1.jpeg?w=1024&format=webp&quality=85";
+import rimsko2 from "@/assets/photos/rimsko_2.jpeg?w=640;768;1024;1280;1920&format=webp&quality=85&as=srcset";
+import rimsko2Url from "@/assets/photos/rimsko_2.jpeg?w=1024&format=webp&quality=85";
 
 export interface BlogPost {
   id: number;
@@ -10,6 +13,7 @@ export interface BlogPost {
   date: string;
   category: string;
   imageUrl: string;
+  imageSrcSet: string;
   content: string;
 }
 
@@ -21,7 +25,8 @@ export const blogPosts: BlogPost[] = [
     author: "Neško - Škone",
     date: "15. januar 2025",
     category: "Istorija",
-    imageUrl: rimsko1,
+    imageUrl: rimsko1Url,
+    imageSrcSet: rimsko1,
     content: `
       <h2>Početak naselja</h2>
       <p>Selo Šebet ima bogatu istoriju koja seže nekoliko vekova unazad. Prvi pisani tragovi o selu datiraju iz 15. veka, kada je ovo područje bilo deo većeg feudalnog poseda.</p>
@@ -46,7 +51,8 @@ export const blogPosts: BlogPost[] = [
     author: "Ana Jovanović",
     date: "10. januar 2025",
     category: "Kultura",
-    imageUrl: slika777,
+    imageUrl: slika777Url,
+    imageSrcSet: slika777,
     content: `
       <h2>Godišnji običaji</h2>
       <p>Selo Šebet neguje bogatu tradiciju kulturnih i verskih praznika koji se slave tokom cele godine. Ove svečanosti okupljaju zajednicu i prenose tradiciju sa kolena na koleno.</p>
@@ -67,7 +73,8 @@ export const blogPosts: BlogPost[] = [
     author: "Stefan Nikolić",
     date: "5. januar 2025",
     category: "Ljudi",
-    imageUrl: slika777,
+    imageUrl: slika777Url,
+    imageSrcSet: slika777,
     content: `
       <h2>Seoska zajednica</h2>
       <p>Srce svakog sela su njegovi ljudi. U Šebetu živi zajednica koja čuva tradiciju, ali i gradi budućnost kroz svoje svakodnevne aktivnosti i doprinos.</p>
@@ -88,7 +95,8 @@ export const blogPosts: BlogPost[] = [
     author: "Jelena Đorđević",
     date: "1. januar 2025",
     category: "Priroda",
-    imageUrl: rimsko2,
+    imageUrl: rimsko2Url,
+    imageSrcSet: rimsko2,
     content: `
       <h2>Geografski položaj</h2>
       <p>Selo Šebet se nalazi u podnožju planinskog masiva, okruženo šumama i livadama. Ovaj prirodni ambijent pruža neverovatne mogućnosti za aktivnosti na otvorenom.</p>
@@ -110,7 +118,8 @@ export const blogPosts: BlogPost[] = [
     author: "Milica Todorović",
     date: "28. decembar 2024",
     category: "Gastronomija",
-    imageUrl: rimsko2,
+    imageUrl: rimsko2Url,
+    imageSrcSet: rimsko2,
     content: `
       <h2>Tradicionalna kuhinja</h2>
       <p>Gastronomija Šebeta je rezultat vekova kulinarskog nasleđa. Recepti se prenose sa kolena na koleno, čuvajući autentične ukuse i tehnike pripreme.</p>
@@ -132,7 +141,8 @@ export const blogPosts: BlogPost[] = [
     author: "Nikola Stanković",
     date: "20. decembar 2024",
     category: "Arhitektura",
-    imageUrl: rimsko1,
+    imageUrl: rimsko1Url,
+    imageSrcSet: rimsko1,
     content: `
       <h2>Tradicionalna gradnja</h2>
       <p>Arhitektura Šebeta odražava tradicionalni stil gradnje karakterističan za ovaj region. Stare kuće su građene od prirodnih materijala - kamena, drveta i ćerpiča.</p>
