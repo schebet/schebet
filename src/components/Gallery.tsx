@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import patternImage from "@/assets/pattern-abstract.jpg?format=webp&quality=85";
+import patternImageSrcSet from "@/assets/pattern-abstract.jpg?w=300;640;768;1024&format=webp&quality=85&as=srcset";
+import patternImageUrl from "@/assets/pattern-abstract.jpg?w=1024&format=webp&quality=85";
+import { getGallerySizes } from "@/lib/imageUtils";
 
 const galleryImages = [
   { id: 1, title: "Centar sela", category: "Arhitektura" },
@@ -65,8 +67,11 @@ export const Gallery = () => {
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <img
-                src={patternImage}
+                src={patternImageUrl}
+                srcSet={patternImageSrcSet}
+                sizes={getGallerySizes()}
                 alt={image.title}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
@@ -85,7 +90,9 @@ export const Gallery = () => {
             {selectedImage && (
               <div className="space-y-4">
                 <img
-                  src={patternImage}
+                  src={patternImageUrl}
+                  srcSet={patternImageSrcSet}
+                  sizes="(max-width: 1024px) 100vw, 1024px"
                   alt={galleryImages.find((img) => img.id === selectedImage)?.title}
                   className="w-full h-auto rounded-lg"
                 />

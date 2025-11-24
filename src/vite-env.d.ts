@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-imagetools/client" />
 
+// Standard image imports
 declare module '*.jpg' {
   const src: string;
   export default src;
@@ -26,13 +27,38 @@ declare module '*.webp' {
   export default src;
 }
 
-// Support for vite-imagetools query parameters
-declare module '*?format=webp&quality=85' {
+declare module '*.svg' {
   const src: string;
   export default src;
 }
 
-declare module '*?format=webp' {
-  const src: string;
-  export default src;
+// Catch-all for any image with query parameters (vite-imagetools)
+declare module '*jpg?*' {
+  const value: any;
+  export default value;
+}
+
+declare module '*JPG?*' {
+  const value: any;
+  export default value;
+}
+
+declare module '*jpeg?*' {
+  const value: any;
+  export default value;
+}
+
+declare module '*png?*' {
+  const value: any;
+  export default value;
+}
+
+declare module '*webp?*' {
+  const value: any;
+  export default value;
+}
+
+declare module '*svg?*' {
+  const value: any;
+  export default value;
 }

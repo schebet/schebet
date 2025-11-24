@@ -5,6 +5,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts, getCategoryColor } from "@/data/blogPosts";
+import { getBlogCardSizes } from "@/lib/imageUtils";
 
 export const BlogGrid = ({ selectedCategory }: { selectedCategory?: string }) => {
   const filteredPosts = selectedCategory && selectedCategory !== "Sve" 
@@ -38,7 +39,10 @@ export const BlogGrid = ({ selectedCategory }: { selectedCategory?: string }) =>
               <AspectRatio ratio={16 / 9} className="overflow-hidden">
                 <img
                   src={post.imageUrl}
+                  srcSet={post.imageSrcSet}
+                  sizes={getBlogCardSizes()}
                   alt={post.title}
+                  loading="lazy"
                   className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
                 />
               </AspectRatio>
