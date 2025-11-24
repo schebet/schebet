@@ -3,20 +3,13 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { SocialShare } from "@/components/SocialShare";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Calendar, User, ArrowLeft, Tag, ArrowRight, Home } from "lucide-react";
+import { Calendar, User, ArrowLeft, Tag, ArrowRight } from "lucide-react";
 import { blogPosts as blogPostsData, getCategoryColor } from "@/data/blogPosts";
 
 const BlogPost = () => {
@@ -57,34 +50,13 @@ const BlogPost = () => {
       <Navigation />
       <main className="flex-1">
         <article className="container mx-auto px-4 py-12 max-w-4xl">
-          <Breadcrumb className="mb-8">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/" className="flex items-center gap-1">
-                    <Home className="w-4 h-4" />
-                    Početna
-                  </Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/#blog">Blog</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/#blog">{post.category}</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{post.title}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          <Breadcrumbs 
+            items={[
+              { label: 'Blog', href: '/#blog' },
+              { label: post.category, href: '/#blog' },
+              { label: post.title }
+            ]} 
+          />
 
           <div className="mb-8 animate-fade-in-up">
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
