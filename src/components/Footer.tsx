@@ -1,7 +1,19 @@
 import { Facebook, Instagram, Mail, Github, MapPin, Phone } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+
+  const handleNavClick = (sectionId: string) => {
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`;
+    } else {
+      // If we're on home page, smooth scroll to section
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-card border-t border-border">
@@ -55,24 +67,24 @@ export const Footer = () => {
             <h4 className="font-bold mb-4 text-foreground">Brzi linkovi</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">
+                <button onClick={() => handleNavClick('home')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                   Početna
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <button onClick={() => handleNavClick('blog')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                   Blog
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#gallery" className="text-muted-foreground hover:text-primary transition-colors">
+                <button onClick={() => handleNavClick('gallery')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                   Galerija
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                <button onClick={() => handleNavClick('about')} className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                   O selu
-                </a>
+                </button>
               </li>
             </ul>
           </div>
