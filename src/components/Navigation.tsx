@@ -53,31 +53,33 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
             
             <div className="flex items-center gap-4 ml-4 border-l border-border pl-4">
               <a href="https://www.facebook.com/seloSebet" target="_blank" rel="noopener noreferrer" 
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="Facebook">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5" style={{ color: '#1877F2' }} />
               </a>
               <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
-                 aria-label="Twitter/X">
-                <Twitter className="w-5 h-5" />
+                 className="hover:scale-110 transition-transform"
+                 aria-label="X (Twitter)">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#000000' }}>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
               <a href="https://www.tiktok.com/@schebet_selo" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="TikTok">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#000000' }}>
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
               </a>
               <a href="https://github.com/schebet/schebet" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="Github">
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5" style={{ color: '#181717' }} />
               </a>
               <a href="/rss.xml" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="RSS Feed">
-                <Rss className="w-5 h-5" />
+                <Rss className="w-5 h-5" style={{ color: '#FF6600' }} />
               </a>
               <Button
                 variant="ghost"
@@ -118,31 +120,33 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
             </button>
             <div className="flex items-center gap-4 pt-4 border-t border-border">
               <a href="https://www.facebook.com/seloSebet" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="Facebook">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5" style={{ color: '#1877F2' }} />
               </a>
               <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
-                 aria-label="Twitter/X">
-                <Twitter className="w-5 h-5" />
+                 className="hover:scale-110 transition-transform"
+                 aria-label="X (Twitter)">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#000000' }}>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
               <a href="https://www.tiktok.com/@schebet_selo" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="TikTok">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#000000' }}>
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
               </a>
               <a href="https://github.com/schebet/schebet" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="Github">
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5" style={{ color: '#181717' }} />
               </a>
               <a href="/rss.xml" target="_blank" rel="noopener noreferrer"
-                 className="text-muted-foreground hover:text-primary transition-colors"
+                 className="hover:scale-110 transition-transform"
                  aria-label="RSS Feed">
-                <Rss className="w-5 h-5" />
+                <Rss className="w-5 h-5" style={{ color: '#FF6600' }} />
               </a>
               <Button
                 variant="ghost"
