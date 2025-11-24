@@ -5,6 +5,15 @@ import rimsko1Url from "@/assets/photos/rimsko_1.jpeg?w=1024&format=webp&quality
 import rimsko2 from "@/assets/photos/rimsko_2.jpeg?w=640;768;1024;1280;1920&format=webp&quality=85&as=srcset";
 import rimsko2Url from "@/assets/photos/rimsko_2.jpeg?w=1024&format=webp&quality=85";
 
+export interface ContentBlock {
+  type: 'text' | 'image';
+  html?: string;
+  src?: string;
+  srcset?: string;
+  alt?: string;
+  caption?: string;
+}
+
 export interface BlogPost {
   id: number;
   title: string;
@@ -14,7 +23,7 @@ export interface BlogPost {
   category: string;
   imageUrl: string;
   imageSrcSet: string;
-  content: string;
+  content: ContentBlock[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -27,22 +36,34 @@ export const blogPosts: BlogPost[] = [
     category: "Istorija",
     imageUrl: rimsko1Url,
     imageSrcSet: rimsko1,
-    content: `
-      <h2>Početak naselja</h2>
-      <p>Selo Šebet ima bogatu istoriju koja seže nekoliko vekova unazad. Prvi pisani tragovi o selu datiraju iz 15. veka, kada je ovo područje bilo deo većeg feudalnog poseda.</p>
-      
-      <h2>Razvoj kroz vekove</h2>
-      <p>Tokom 18. i 19. veka, selo je doživelo značajan razvoj. Građene su prve škole, crkve i javne zgrade koje su postale centar društvenog života zajednice.</p>
-      
-      <p>Stanovništvo se bavilo uglavnom poljoprivredom, stočarstvom i tradicionalnim zanatima. Mnoge od ovih tradicija su očuvane i dan danas.</p>
-      <p> </p>
-      
-      <h2>Moderne prilike</h2>
-      <p> </p>
-      <p>U 20. veku, selo je prošlo kroz modernizaciju infrastrukture. Elektrifikacija, putevi i vodosnabdevanje su značajno poboljšali kvalitet života stanovnika.</p>
-      
-      <p>Danas, Šebet predstavlja spoj tradicionalnog seoskog života i modernih pogodnosti, čuvajući svoje nasleđe dok gleda ka budućnosti.</p>
-    `,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Početak naselja</h2><p>Selo Šebet ima bogatu istoriju koja seže nekoliko vekova unazad. Prvi pisani tragovi o selu datiraju iz 15. veka, kada je ovo područje bilo deo većeg feudalnog poseda.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko1Url,
+        srcset: rimsko1,
+        alt: 'Arheološko nalazište rimskog perioda',
+        caption: 'Ostatci rimskog naselja u blizini Šebeta'
+      },
+      {
+        type: 'text',
+        html: '<h2>Razvoj kroz vekove</h2><p>Tokom 18. i 19. veka, selo je doživelo značajan razvoj. Građene su prve škole, crkve i javne zgrade koje su postale centar društvenog života zajednice.</p><p>Stanovništvo se bavilo uglavnom poljoprivredom, stočarstvom i tradicionalnim zanatima. Mnoge od ovih tradicija su očuvane i dan danas.</p>'
+      },
+      {
+        type: 'image',
+        src: slika777Url,
+        srcset: slika777,
+        alt: 'Centar sela Šebet',
+        caption: 'Centralni deo sela danas'
+      },
+      {
+        type: 'text',
+        html: '<h2>Moderne prilike</h2><p>U 20. veku, selo je prošlo kroz modernizaciju infrastrukture. Elektrifikacija, putevi i vodosnabdevanje su značajno poboljšali kvalitet života stanovnika.</p><p>Danas, Šebet predstavlja spoj tradicionalnog seoskog života i modernih pogodnosti, čuvajući svoje nasleđe dok gleda ka budućnosti.</p>'
+      }
+    ],
   },
   {
     id: 2,
@@ -53,18 +74,23 @@ export const blogPosts: BlogPost[] = [
     category: "Kultura",
     imageUrl: slika777Url,
     imageSrcSet: slika777,
-    content: `
-      <h2>Godišnji običaji</h2>
-      <p>Selo Šebet neguje bogatu tradiciju kulturnih i verskih praznika koji se slave tokom cele godine. Ove svečanosti okupljaju zajednicu i prenose tradiciju sa kolena na koleno.</p>
-      
-      <h2>Slava sela</h2>
-      <p>Svake godine u julu, selo proslavlja svoju krsnu slavu, koja okuplja sva domaćinstva i goste iz okolnih mesta. Ovo je najvažniji događaj u seoskom kalendaru.</p>
-      
-      <h2>Tradicionalni festivali</h2>
-      <p>Pored verskih praznika, održavaju se i tradicionalni festivali: berba grožđa u jesen, žetveni praznik u leto, i zimski sajam u decembru.</p>
-      
-      <p>Ovi događaji uključuju folklorne igre, tradicionalnu muziku, izložbe domaćih proizvoda i takmičenja u pripremi autentičnih jela.</p>
-    `,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Godišnji običaji</h2><p>Selo Šebet neguje bogatu tradiciju kulturnih i verskih praznika koji se slave tokom cele godine. Ove svečanosti okupljaju zajednicu i prenose tradiciju sa kolena na koleno.</p>'
+      },
+      {
+        type: 'image',
+        src: slika777Url,
+        srcset: slika777,
+        alt: 'Seoska svečanost u Šebetu',
+        caption: 'Okupljanje stanovnika na centralnom trgu'
+      },
+      {
+        type: 'text',
+        html: '<h2>Slava sela</h2><p>Svake godine u julu, selo proslavlja svoju krsnu slavu, koja okuplja sva domaćinstva i goste iz okolnih mesta. Ovo je najvažniji događaj u seoskom kalendaru.</p><h2>Tradicionalni festivali</h2><p>Pored verskih praznika, održavaju se i tradicionalni festivali: berba grožđa u jesen, žetveni praznik u leto, i zimski sajam u decembru.</p><p>Ovi događaji uključuju folklorne igre, tradicionalnu muziku, izložbe domaćih proizvoda i takmičenja u pripremi autentičnih jela.</p>'
+      }
+    ],
   },
   {
     id: 3,
@@ -75,18 +101,23 @@ export const blogPosts: BlogPost[] = [
     category: "Ljudi",
     imageUrl: slika777Url,
     imageSrcSet: slika777,
-    content: `
-      <h2>Seoska zajednica</h2>
-      <p>Srce svakog sela su njegovi ljudi. U Šebetu živi zajednica koja čuva tradiciju, ali i gradi budućnost kroz svoje svakodnevne aktivnosti i doprinos.</p>
-      
-      <h2>Lokalni proizvođači</h2>
-      <p>Mnoge porodice se bave organskom proizvodnjom hrane, pčelarstvom i tradiconalnim zanatima. Njihovi proizvodi su poznati širom regiona po kvalitetu i autentičnosti.</p>
-      
-      <h2>Aktivisti i volonteri</h2>
-      <p>Mlađe generacije su pokrenule brojne inicijative za očuvanje životne sredine, obnovu starih kuća, i digitalizaciju seoskog arhiva.</p>
-      
-      <p>Kroz volonterski rad u udruženjima i lokalnim akcijama, građani Šebeta pokazuju da zajedništvo i solidarnost nisu izgubljene vrednosti.</p>
-    `,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Seoska zajednica</h2><p>Srce svakog sela su njegovi ljudi. U Šebetu živi zajednica koja čuva tradiciju, ali i gradi budućnost kroz svoje svakodnevne aktivnosti i doprinos.</p><h2>Lokalni proizvođači</h2><p>Mnoge porodice se bave organskom proizvodnjom hrane, pčelarstvom i tradiconalnim zanatima. Njihovi proizvodi su poznati širom regiona po kvalitetu i autentičnosti.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko2Url,
+        srcset: rimsko2,
+        alt: 'Lokalni proizvođači',
+        caption: 'Tradicionalni zanati i proizvodi'
+      },
+      {
+        type: 'text',
+        html: '<h2>Aktivisti i volonteri</h2><p>Mlađe generacije su pokrenule brojne inicijative za očuvanje životne sredine, obnovu starih kuća, i digitalizaciju seoskog arhiva.</p><p>Kroz volonterski rad u udruženjima i lokalnim akcijama, građani Šebeta pokazuju da zajedništvo i solidarnost nisu izgubljene vrednosti.</p>'
+      }
+    ],
   },
   {
     id: 4,
@@ -97,19 +128,23 @@ export const blogPosts: BlogPost[] = [
     category: "Priroda",
     imageUrl: rimsko2Url,
     imageSrcSet: rimsko2,
-    content: `
-      <h2>Geografski položaj</h2>
-      <p>Selo Šebet se nalazi u podnožju planinskog masiva, okruženo šumama i livadama. Ovaj prirodni ambijent pruža neverovatne mogućnosti za aktivnosti na otvorenom.</p>
-      
-      <h2>Planinske staze</h2>
-      <p>Brojne planinarske staze vode kroz okolne šume do vidikovaca sa kojih se pruža spektakularan pogled na dolinu. Najpoznatija staza vodi do vrha Veliki kamen.</p>
-      
-      <h2>Reke i izvori</h2>
-      <p>Kroz selo protiče kristalno čista planinska reka, koja je dom brojnih riba i divljih životinja. Prirodni izvori vode su poznati po svom kvalitetu.</p>
-      
-      <h2>Flora i fauna</h2>
-      <p>Područje je dom raznovrsnog biljnog i životinjskog sveta. U šumama žive srne, divlje svinje, lisice, a mogu se uočiti i retke vrste ptica.</p>
-    `,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Geografski položaj</h2><p>Selo Šebet se nalazi u podnožju planinskog masiva, okruženo šumama i livadama. Ovaj prirodni ambijent pruža neverovatne mogućnosti za aktivnosti na otvorenom.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko2Url,
+        srcset: rimsko2,
+        alt: 'Priroda oko Šebeta',
+        caption: 'Planinski ambijent koji okružuje selo'
+      },
+      {
+        type: 'text',
+        html: '<h2>Planinske staze</h2><p>Brojne planinarske staze vode kroz okolne šume do vidikovaca sa kojih se pruža spektakularan pogled na dolinu. Najpoznatija staza vodi do vrha Veliki kamen.</p><h2>Reke i izvori</h2><p>Kroz selo protiče kristalno čista planinska reka, koja je dom brojnih riba i divljih životinja. Prirodni izvori vode su poznati po svom kvalitetu.</p><h2>Flora i fauna</h2><p>Područje je dom raznovrsnog biljnog i životinjskog sveta. U šumama žive srne, divlje svinje, lisice, a mogu se uočiti i retke vrste ptica.</p>'
+      }
+    ],
   },
   {
     id: 5,
@@ -120,19 +155,23 @@ export const blogPosts: BlogPost[] = [
     category: "Gastronomija",
     imageUrl: rimsko2Url,
     imageSrcSet: rimsko2,
-    content: `
-      <h2>Tradicionalna kuhinja</h2>
-      <p>Gastronomija Šebeta je rezultat vekova kulinarskog nasleđa. Recepti se prenose sa kolena na koleno, čuvajući autentične ukuse i tehnike pripreme.</p>
-      
-      <h2>Karakteristična jela</h2>
-      <p>Posebno su poznati domaći sir, pršuta sušena na planinski način, ajvar, kiseli kupus i zimnica. Svaka domaćica ima svoje tajne sastojke koji čine jelo jedinstvenim.</p>
-      
-      <h2>Slavska gozba</h2>
-      <p>Za velike proslave priprema se tradicionalna gozba: pečenje na ražnju, sarma, gibanica, različiti kolaći i domaće rakije. Ova jela su neodvojivi deo svakog slavlja.</p>
-      
-      <h2>Domaći proizvodi</h2>
-      <p>Većina namirnica potiče iz sopstvenih bašta i ekonomija. Organski uzgajano voće i povrće, domaće životinje i pčelinji proizvodi čine osnovu svake trpeze.</p>
-    `,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Tradicionalna kuhinja</h2><p>Gastronomija Šebeta je rezultat vekova kulinarskog nasleđa. Recepti se prenose sa kolena na koleno, čuvajući autentične ukuse i tehnike pripreme.</p><h2>Karakteristična jela</h2><p>Posebno su poznati domaći sir, pršuta sušena na planinski način, ajvar, kiseli kupus i zimnica. Svaka domaćica ima svoje tajne sastojke koji čine jelo jedinstvenim.</p>'
+      },
+      {
+        type: 'image',
+        src: slika777Url,
+        srcset: slika777,
+        alt: 'Tradicionalna gozba',
+        caption: 'Domaća jela i proizvodi'
+      },
+      {
+        type: 'text',
+        html: '<h2>Slavska gozba</h2><p>Za velike proslave priprema se tradicionalna gozba: pečenje na ražnju, sarma, gibanica, različiti kolaći i domaće rakije. Ova jela su neodvojivi deo svakog slavlja.</p><h2>Domaći proizvodi</h2><p>Većina namirnica potiče iz sopstvenih bašta i ekonomija. Organski uzgajano voće i povrće, domaće životinje i pčelinji proizvodi čine osnovu svake trpeze.</p>'
+      }
+    ],
   },
   {
     id: 6,
@@ -143,19 +182,34 @@ export const blogPosts: BlogPost[] = [
     category: "Arhitektura",
     imageUrl: rimsko1Url,
     imageSrcSet: rimsko1,
-    content: `
-      <h2>Tradicionalna gradnja</h2>
-      <p>Arhitektura Šebeta odražava tradicionalni stil gradnje karakterističan za ovaj region. Stare kuće su građene od prirodnih materijala - kamena, drveta i ćerpiča.</p>
-      
-      <h2>Seoska crkva</h2>
-      <p>Crkva Svetog Nikole, građena u 18. veku, predstavlja najznačajniji spomenik u selu. Freske i ikonostas su delo poznatih umetnika tog doba.</p>
-      
-      <h2>Kameni mostovi</h2>
-      <p>Nekoliko starih kamenih mostova preko potoka i reke svedoče o majstorstvu graditelja prošlosti. Ovi mostovi su još uvek u funkciji i predstavljaju vredne arhitektonske spomenike.</p>
-      
-      <h2>Projekti očuvanja</h2>
-      <p>Pokrenute su inicijative za restauraciju najstarijih zgrada i njihovo pretvaranje u muzejski prostor i kulturne centre, kako bi se očuvalo nasleđe za buduće generacije.</p>
-    `,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Tradicionalna gradnja</h2><p>Arhitektura Šebeta odražava tradicionalni stil gradnje karakterističan za ovaj region. Stare kuće su građene od prirodnih materijala - kamena, drveta i ćerpiča.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko1Url,
+        srcset: rimsko1,
+        alt: 'Arhitektura Šebeta',
+        caption: 'Tradicionalna gradnja i arhitektonski elementi'
+      },
+      {
+        type: 'text',
+        html: '<h2>Seoska crkva</h2><p>Crkva Svetog Nikole, građena u 18. veku, predstavlja najznačajniji spomenik u selu. Freske i ikonostas su delo poznatih umetnika tog doba.</p><h2>Kameni mostovi</h2><p>Nekoliko starih kamenih mostova preko potoka i reke svedoče o majstorstvu graditelja prošlosti. Ovi mostovi su još uvek u funkciji i predstavljaju vredne arhitektonske spomenike.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko2Url,
+        srcset: rimsko2,
+        alt: 'Kameni mostovi',
+        caption: 'Stari mostovi koji su očuvani do danas'
+      },
+      {
+        type: 'text',
+        html: '<h2>Projekti očuvanja</h2><p>Pokrenute su inicijative za restauraciju najstarijih zgrada i njihovo pretvaranje u muzejski prostor i kulturne centre, kako bi se očuvalo nasleđe za buduće generacije.</p>'
+      }
+    ],
   },
 ];
 
