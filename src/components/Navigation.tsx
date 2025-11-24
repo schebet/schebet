@@ -57,7 +57,7 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  aria-label="Facebook">
                 <Facebook className="w-5 h-5" style={{ color: '#1877F2' }} />
               </a>
-              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
+              <a href="https://x.com/seloschebet" target="_blank" rel="noopener noreferrer"
                  className="hover:scale-110 transition-transform"
                  aria-label="X (Twitter)">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#000000' }}>
@@ -124,7 +124,7 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  aria-label="Facebook">
                 <Facebook className="w-5 h-5" style={{ color: '#1877F2' }} />
               </a>
-              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
+              <a href="https://x.com/seloschebet" target="_blank" rel="noopener noreferrer"
                  className="hover:scale-110 transition-transform"
                  aria-label="X (Twitter)">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#000000' }}>

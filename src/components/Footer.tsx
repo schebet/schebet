@@ -39,7 +39,7 @@ export const Footer = () => {
                 <Facebook className="w-5 h-5" style={{ color: '#1877F2' }} />
               </a>
               <a
-                href="https://x.com/home"
+                href="https://x.com/seloschebet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
