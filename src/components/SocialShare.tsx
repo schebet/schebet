@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Link2, Share2 } from "lucide-react";
+import { Facebook, Twitter, Link2, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -21,9 +21,6 @@ export const SocialShare = ({ url, title, description }: SocialShareProps) => {
         break;
       case "twitter":
         shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(title)}`;
-        break;
-      case "linkedin":
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(fullUrl)}`;
         break;
       case "native":
         if (navigator.share) {
@@ -64,60 +61,51 @@ export const SocialShare = ({ url, title, description }: SocialShareProps) => {
   };
 
   return (
-    <div className="flex items-center gap-2 flex-wrap">
-      <span className="text-sm text-muted-foreground mr-2">Podeli:</span>
-      
-      {navigator.share && (
+    <div className="flex flex-col gap-4">
+      <h3 className="text-sm font-semibold text-foreground">Podelite ovaj članak</h3>
+      <div className="flex items-center gap-3 flex-wrap">
+        {navigator.share && (
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => handleShare("native")}
+            className="gap-2 bg-background/50 backdrop-blur-sm border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-105"
+          >
+            <Share2 className="w-5 h-5" />
+            <span className="font-medium">Podeli</span>
+          </Button>
+        )}
+
         <Button
           variant="outline"
-          size="sm"
-          onClick={() => handleShare("native")}
-          className="gap-2"
+          size="lg"
+          onClick={() => handleShare("facebook")}
+          className="gap-2 bg-[#1877F2]/10 border-[#1877F2]/30 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all duration-200 hover:scale-105"
         >
-          <Share2 className="w-4 h-4" />
-          Podeli
+          <Facebook className="w-5 h-5" />
+          <span className="font-medium">Facebook</span>
         </Button>
-      )}
 
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => handleShare("facebook")}
-        className="gap-2"
-      >
-        <Facebook className="w-4 h-4" />
-        Facebook
-      </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={() => handleShare("twitter")}
+          className="gap-2 bg-[#1DA1F2]/10 border-[#1DA1F2]/30 text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition-all duration-200 hover:scale-105"
+        >
+          <Twitter className="w-5 h-5" />
+          <span className="font-medium">Twitter</span>
+        </Button>
 
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => handleShare("twitter")}
-        className="gap-2"
-      >
-        <Twitter className="w-4 h-4" />
-        Twitter
-      </Button>
-
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => handleShare("linkedin")}
-        className="gap-2"
-      >
-        <Linkedin className="w-4 h-4" />
-        LinkedIn
-      </Button>
-
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => handleShare("copy")}
-        className="gap-2"
-      >
-        <Link2 className="w-4 h-4" />
-        Kopiraj link
-      </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={() => handleShare("copy")}
+          className="gap-2 bg-background/50 backdrop-blur-sm border-border hover:bg-accent hover:text-accent-foreground transition-all duration-200 hover:scale-105"
+        >
+          <Link2 className="w-5 h-5" />
+          <span className="font-medium">Kopiraj link</span>
+        </Button>
+      </div>
     </div>
   );
 };
