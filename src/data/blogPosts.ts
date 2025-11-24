@@ -32,6 +32,52 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 7,
+    title: "Početni blog post - šablon",
+    excerpt: "Ovo je početni blog post koji služi kao šablon. Kopirajte i prilagodite sadržaj prema vašim potrebama...",
+    author: "Admin",
+    date: "25. novembar 2025",
+    category: "Kultura",
+    imageUrl: slika777Url,
+    imageSrcSet: slika777,
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Naslov sekcije</h2><p>Ovo je primer uvodnog teksta. Ovde možete opisati temu blog posta. Tekst može biti kratak ili detaljan, zavisno od vaših potreba.</p><p>Možete dodati više paragrafa i oblikovati tekst HTML tagovima.</p>'
+      },
+      {
+        type: 'image',
+        src: slika777Url,
+        srcset: slika777,
+        alt: 'Opis slike',
+        caption: 'Opis ispod slike - opcionalno'
+      },
+      {
+        type: 'text',
+        html: '<h2>Druga sekcija</h2><p>Nastavite sa tekstom nakon slike. Možete dodavati više sekcija sa naslovima i paragrafima.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Ovo je primer citata. Možete dodati mudre reči ili izjave koje se odnose na temu.',
+        quoteAuthor: 'Ime autora citata'
+      },
+      {
+        type: 'text',
+        html: '<h2>Video sekcija (opciono)</h2><p>Ispod možete dodati video sa YouTube ili Vimeo platforme.</p>'
+      },
+      {
+        type: 'video',
+        videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        videoProvider: 'youtube',
+        caption: 'Opis videa - opcionalno'
+      },
+      {
+        type: 'text',
+        html: '<h2>Zaključak</h2><p>Završite post sa zaključkom ili pozivom na akciju.</p><p><strong>Napomena:</strong> Jednostavno kopirajte ovaj post i prilagodite sve vrednosti (naslov, datum, kategoriju, sadržaj blokova).</p>'
+      }
+    ],
+  },
+  {
     id: 1,
     title: "Istorija sela kroz vekove",
     excerpt: "Otkrijte bogatu istoriju sela Šebet, od prvih naseljenika do danas. Priče koje oblikuju našu zajednicu...",
