@@ -60,7 +60,7 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://github.com/schebet/schebet-chronicles-hub" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/schebet/schebet" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="w-5 h-5" />
               </a>
@@ -114,7 +114,7 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://github.com/schebet/schebet-chronicles-hub" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/schebet/schebet" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="w-5 h-5" />
               </a>
