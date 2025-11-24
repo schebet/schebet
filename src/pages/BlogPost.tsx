@@ -123,8 +123,42 @@ const BlogPost = () => {
           <div 
             className="prose prose-lg max-w-none animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          >
+            {post.content.map((block, index) => {
+              if (block.type === 'text') {
+                return (
+                  <div 
+                    key={index}
+                    dangerouslySetInnerHTML={{ __html: block.html || '' }}
+                  />
+                );
+              }
+              
+              if (block.type === 'image') {
+                return (
+                  <figure key={index} className="my-8">
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg">
+                      <img
+                        src={block.src}
+                        srcSet={block.srcset}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 768px, 896px"
+                        alt={block.alt}
+                        loading="lazy"
+                        className="object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                    {block.caption && (
+                      <figcaption className="text-sm text-muted-foreground text-center mt-3 italic">
+                        {block.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
+              
+              return null;
+            })}
+          </div>
         </article>
 
 
