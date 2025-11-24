@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import patternImage from "@/assets/pattern-abstract.jpg";
+import patternImage from "@/assets/pattern-abstract.jpg?format=webp&quality=85";
 
 const galleryImages = [
   { id: 1, title: "Centar sela", category: "Arhitektura" },
