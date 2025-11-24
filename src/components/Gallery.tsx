@@ -1,19 +1,37 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import patternImageSrcSet from "@/assets/pattern-abstract.jpg?w=300;640;768;1024&format=webp&quality=85&as=srcset";
-import patternImageUrl from "@/assets/pattern-abstract.jpg?w=1024&format=webp&quality=85";
 import { getGallerySizes } from "@/lib/imageUtils";
 
+import slika777SrcSet from "@/assets/photos/777.JPG?w=300;640;768;1024&format=webp&quality=85&as=srcset";
+import slika777Url from "@/assets/photos/777.JPG?w=1024&format=webp&quality=85";
+import rimsko1SrcSet from "@/assets/photos/rimsko_1.jpeg?w=300;640;768;1024&format=webp&quality=85&as=srcset";
+import rimsko1Url from "@/assets/photos/rimsko_1.jpeg?w=1024&format=webp&quality=85";
+import rimsko2SrcSet from "@/assets/photos/rimsko_2.jpeg?w=300;640;768;1024&format=webp&quality=85&as=srcset";
+import rimsko2Url from "@/assets/photos/rimsko_2.jpeg?w=1024&format=webp&quality=85";
+
 const galleryImages = [
-  { id: 1, title: "Centar sela", category: "Arhitektura" },
-  { id: 2, title: "Tradicionalna kuća", category: "Arhitektura" },
-  { id: 3, title: "Seoska crkva", category: "Istorija" },
-  { id: 4, title: "Prirodni pejzaž", category: "Priroda" },
-  { id: 5, title: "Seoska svečanost", category: "Kultura" },
-  { id: 6, title: "Pogled sa brda", category: "Priroda" },
-  { id: 7, title: "Stara čaršija", category: "Istorija" },
-  { id: 8, title: "Tradicionalna nošnja", category: "Kultura" },
+  { 
+    id: 1, 
+    title: "Centar sela", 
+    category: "Arhitektura",
+    imageSrc: slika777Url,
+    imageSrcSet: slika777SrcSet
+  },
+  { 
+    id: 2, 
+    title: "Rimsko naselje", 
+    category: "Istorija",
+    imageSrc: rimsko1Url,
+    imageSrcSet: rimsko1SrcSet
+  },
+  { 
+    id: 3, 
+    title: "Arheološko nalazište", 
+    category: "Istorija",
+    imageSrc: rimsko2Url,
+    imageSrcSet: rimsko2SrcSet
+  },
 ];
 
 export const Gallery = () => {
@@ -67,8 +85,8 @@ export const Gallery = () => {
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <img
-                src={patternImageUrl}
-                srcSet={patternImageSrcSet}
+                src={image.imageSrc}
+                srcSet={image.imageSrcSet}
                 sizes={getGallerySizes()}
                 alt={image.title}
                 loading="lazy"
@@ -90,8 +108,8 @@ export const Gallery = () => {
             {selectedImage && (
               <div className="space-y-4">
                 <img
-                  src={patternImageUrl}
-                  srcSet={patternImageSrcSet}
+                  src={galleryImages.find((img) => img.id === selectedImage)?.imageSrc}
+                  srcSet={galleryImages.find((img) => img.id === selectedImage)?.imageSrcSet}
                   sizes="(max-width: 1024px) 100vw, 1024px"
                   alt={galleryImages.find((img) => img.id === selectedImage)?.title}
                   className="w-full h-auto rounded-lg"
