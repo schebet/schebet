@@ -1,16 +1,45 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+  PaginationEllipsis,
+} from "@/components/ui/pagination";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts, getCategoryColor } from "@/data/blogPosts";
 import { getBlogCardSizes } from "@/lib/imageUtils";
 
+const POSTS_PER_PAGE = 6;
+
 export const BlogGrid = ({ selectedCategory }: { selectedCategory?: string }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const filteredPosts = selectedCategory && selectedCategory !== "Sve" 
     ? blogPosts.filter(post => post.category === selectedCategory)
     : blogPosts;
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const endIndex = startIndex + POSTS_PER_PAGE;
+  const currentPosts = filteredPosts.slice(startIndex, endIndex);
+
+  // Reset to page 1 when category changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory]);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section id="blog" className="py-20 px-4 bg-muted/30">
@@ -29,8 +58,9 @@ export const BlogGrid = ({ selectedCategory }: { selectedCategory?: string }) =>
             <p className="text-xl text-muted-foreground">Nema postova u ovoj kategoriji.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map((post, index) => (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {currentPosts.map((post, index) => (
             <Card
               key={post.id}
               className="flex flex-col overflow-hidden card-hover bg-gradient-card border-border/50"
@@ -76,15 +106,66 @@ export const BlogGrid = ({ selectedCategory }: { selectedCategory?: string }) =>
                 </Link>
               </CardFooter>
             </Card>
-          ))}
-          </div>
-        )}
+            ))}
+            </div>
 
-        <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            Prikaži sve članke
-          </Button>
-        </div>
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12">
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious 
+                        onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+                        className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                      />
+                    </PaginationItem>
+                    
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                      // Show first page, last page, current page, and pages around current
+                      const showPage = 
+                        page === 1 || 
+                        page === totalPages || 
+                        (page >= currentPage - 1 && page <= currentPage + 1);
+                      
+                      const showEllipsisBefore = page === currentPage - 2 && currentPage > 3;
+                      const showEllipsisAfter = page === currentPage + 2 && currentPage < totalPages - 2;
+
+                      if (showEllipsisBefore || showEllipsisAfter) {
+                        return (
+                          <PaginationItem key={page}>
+                            <PaginationEllipsis />
+                          </PaginationItem>
+                        );
+                      }
+
+                      if (!showPage) return null;
+
+                      return (
+                        <PaginationItem key={page}>
+                          <PaginationLink
+                            onClick={() => handlePageChange(page)}
+                            isActive={currentPage === page}
+                            className="cursor-pointer"
+                          >
+                            {page}
+                          </PaginationLink>
+                        </PaginationItem>
+                      );
+                    })}
+                    
+                    <PaginationItem>
+                      <PaginationNext 
+                        onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+                        className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                      />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            )}
+          </>
+        )}
       </div>
     </section>
   );
