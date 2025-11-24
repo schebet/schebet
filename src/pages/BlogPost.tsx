@@ -47,9 +47,7 @@ const BlogPost = () => {
   }
 
   const fullUrl = `${window.location.origin}/blog/${post.id}`;
-  const imageUrl = post.imageUrl.startsWith('http') 
-    ? post.imageUrl 
-    : `${window.location.origin}${post.imageUrl}`;
+  const ogImageUrl = `${window.location.origin}${post.ogImage}`;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -61,7 +59,7 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content={ogImageUrl} />
         <meta property="og:url" content={fullUrl} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
@@ -71,7 +69,7 @@ const BlogPost = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
 
       <Navigation />

@@ -27,6 +27,7 @@ export interface BlogPost {
   category: string;
   imageUrl: string;
   imageSrcSet: string;
+  ogImage: string;
   content: ContentBlock[];
 }
 
@@ -40,6 +41,7 @@ export const blogPosts: BlogPost[] = [
     category: "Kultura",
     imageUrl: slika777Url,
     imageSrcSet: slika777,
+    ogImage: "/og-images/777.jpg",
     content: [
       {
         type: 'text',
@@ -121,6 +123,7 @@ export const blogPosts: BlogPost[] = [
     category: "Istorija",
     imageUrl: rimsko1Url,
     imageSrcSet: rimsko1,
+    ogImage: "/og-images/rimsko_1.jpg",
     content: [
       {
         type: 'text',
@@ -164,6 +167,7 @@ export const blogPosts: BlogPost[] = [
     category: "Kultura",
     imageUrl: slika777Url,
     imageSrcSet: slika777,
+    ogImage: "/og-images/777.jpg",
     content: [
       {
         type: 'text',
@@ -197,6 +201,7 @@ export const blogPosts: BlogPost[] = [
     category: "Ljudi",
     imageUrl: slika777Url,
     imageSrcSet: slika777,
+    ogImage: "/og-images/777.jpg",
     content: [
       {
         type: 'text',
@@ -229,6 +234,7 @@ export const blogPosts: BlogPost[] = [
     category: "Priroda",
     imageUrl: rimsko2Url,
     imageSrcSet: rimsko2,
+    ogImage: "/og-images/rimsko_2.jpg",
     content: [
       {
         type: 'text',
@@ -267,6 +273,7 @@ export const blogPosts: BlogPost[] = [
     category: "Gastronomija",
     imageUrl: rimsko2Url,
     imageSrcSet: rimsko2,
+    ogImage: "/og-images/rimsko_2.jpg",
     content: [
       {
         type: 'text',
@@ -299,6 +306,7 @@ export const blogPosts: BlogPost[] = [
     category: "Arhitektura",
     imageUrl: rimsko1Url,
     imageSrcSet: rimsko1,
+    ogImage: "/og-images/rimsko_1.jpg",
     content: [
       {
         type: 'text',
