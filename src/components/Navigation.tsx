@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Moon, Sun, Facebook, Instagram, Mail, Github, Rss } from "lucide-react";
+import { Menu, X, Moon, Sun, Facebook, Twitter, Github, Rss } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = ({ selectedCategory, onCategoryChange }: { 
@@ -57,10 +57,10 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors"
-                 aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
+                 aria-label="Twitter/X">
+                <Twitter className="w-5 h-5" />
               </a>
               <a href="https://www.tiktok.com/@schebet_selo" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors"
@@ -73,11 +73,6 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  className="text-muted-foreground hover:text-primary transition-colors"
                  aria-label="Github">
                 <Github className="w-5 h-5" />
-              </a>
-              <a href="mailto:info@seloSebet.com"
-                 className="text-muted-foreground hover:text-primary transition-colors"
-                 aria-label="Email">
-                <Mail className="w-5 h-5" />
               </a>
               <a href="/rss.xml" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors"
@@ -127,10 +122,10 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors"
-                 aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
+                 aria-label="Twitter/X">
+                <Twitter className="w-5 h-5" />
               </a>
               <a href="https://www.tiktok.com/@schebet_selo" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors"
@@ -143,11 +138,6 @@ export const Navigation = ({ selectedCategory, onCategoryChange }: {
                  className="text-muted-foreground hover:text-primary transition-colors"
                  aria-label="Github">
                 <Github className="w-5 h-5" />
-              </a>
-              <a href="mailto:info@seloSebet.com"
-                 className="text-muted-foreground hover:text-primary transition-colors"
-                 aria-label="Email">
-                <Mail className="w-5 h-5" />
               </a>
               <a href="/rss.xml" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors"

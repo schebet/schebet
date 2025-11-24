@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, Github, MapPin, Phone, Rss } from "lucide-react";
+import { Facebook, Twitter, Github, MapPin, Phone, Rss } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 export const Footer = () => {
@@ -39,13 +39,13 @@ export const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://x.com/home"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Instagram"
+                aria-label="Twitter/X"
               >
-                <Instagram className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://www.tiktok.com/@schebet_selo"
@@ -66,13 +66,6 @@ export const Footer = () => {
                 aria-label="Github"
               >
                 <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:info@seloSebet.com"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
               </a>
               <a
                 href="/rss.xml"
@@ -124,10 +117,6 @@ export const Footer = () => {
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <span>+381 123 456 789</span>
-              </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Mail className="w-5 h-5 flex-shrink-0" />
-                <span>info@seloSebet.com</span>
               </li>
             </ul>
           </div>
