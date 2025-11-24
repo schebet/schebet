@@ -67,7 +67,7 @@ export const Footer = () => {
                 className="hover:scale-110 transition-transform"
                 aria-label="Github"
               >
-                <Github className="w-5 h-5" style={{ color: '#181717' }} />
+                <Github className="w-5 h-5 text-[#181717] dark:text-white" />
               </a>
               <a
                 href="/rss.xml"
