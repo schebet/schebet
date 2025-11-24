@@ -6,12 +6,16 @@ import rimsko2 from "@/assets/photos/rimsko_2.jpeg?w=640;768;1024;1280;1920&form
 import rimsko2Url from "@/assets/photos/rimsko_2.jpeg?w=1024&format=webp&quality=85";
 
 export interface ContentBlock {
-  type: 'text' | 'image';
+  type: 'text' | 'image' | 'video' | 'quote';
   html?: string;
   src?: string;
   srcset?: string;
   alt?: string;
   caption?: string;
+  videoUrl?: string;
+  videoProvider?: 'youtube' | 'vimeo';
+  quoteText?: string;
+  quoteAuthor?: string;
 }
 
 export interface BlogPost {
