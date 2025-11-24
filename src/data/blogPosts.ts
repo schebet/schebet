@@ -33,7 +33,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 7,
-    title: "Početni blog post - šablon",
+    title: "Šablon",
     excerpt: "Ovo je početni blog post koji služi kao šablon. Kopirajte i prilagodite sadržaj prema vašim potrebama...",
     author: "Admin",
     date: "25. novembar 2025",
