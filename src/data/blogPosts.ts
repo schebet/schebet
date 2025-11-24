@@ -53,6 +53,11 @@ export const blogPosts: BlogPost[] = [
         caption: 'Ostatci rimskog naselja u blizini Šebeta'
       },
       {
+        type: 'quote',
+        quoteText: 'Istorija nije ono što se dogodilo, već priče koje prenosimo o tome što se dogodilo.',
+        quoteAuthor: 'Народна мудрост'
+      },
+      {
         type: 'text',
         html: '<h2>Razvoj kroz vekove</h2><p>Tokom 18. i 19. veka, selo je doživelo značajan razvoj. Građene su prve škole, crkve i javne zgrade koje su postale centar društvenog života zajednice.</p><p>Stanovništvo se bavilo uglavnom poljoprivredom, stočarstvom i tradicionalnim zanatima. Mnoge od ovih tradicija su očuvane i dan danas.</p>'
       },
@@ -93,6 +98,12 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'text',
         html: '<h2>Slava sela</h2><p>Svake godine u julu, selo proslavlja svoju krsnu slavu, koja okuplja sva domaćinstva i goste iz okolnih mesta. Ovo je najvažniji događaj u seoskom kalendaru.</p><h2>Tradicionalni festivali</h2><p>Pored verskih praznika, održavaju se i tradicionalni festivali: berba grožđa u jesen, žetveni praznik u leto, i zimski sajam u decembru.</p><p>Ovi događaji uključuju folklorne igre, tradicionalnu muziku, izložbe domaćih proizvoda i takmičenja u pripremi autentičnih jela.</p>'
+      },
+      {
+        type: 'video',
+        videoUrl: 'https://www.youtube.com/watch?v=qGgnaj6y75s',
+        videoProvider: 'youtube',
+        caption: 'Tradicionalna srpska muzika i igre'
       }
     ],
   },
@@ -109,6 +120,11 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'text',
         html: '<h2>Seoska zajednica</h2><p>Srce svakog sela su njegovi ljudi. U Šebetu živi zajednica koja čuva tradiciju, ali i gradi budućnost kroz svoje svakodnevne aktivnosti i doprinos.</p><h2>Lokalni proizvođači</h2><p>Mnoge porodice se bave organskom proizvodnjom hrane, pčelarstvom i tradiconalnim zanatima. Njihovi proizvodi su poznati širom regiona po kvalitetu i autentičnosti.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Sila zajednice je u pojedincu, a snaga pojedinca u zajednici.',
+        quoteAuthor: 'Stara srpska poslovica'
       },
       {
         type: 'image',
@@ -147,6 +163,17 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'text',
         html: '<h2>Planinske staze</h2><p>Brojne planinarske staze vode kroz okolne šume do vidikovaca sa kojih se pruža spektakularan pogled na dolinu. Najpoznatija staza vodi do vrha Veliki kamen.</p><h2>Reke i izvori</h2><p>Kroz selo protiče kristalno čista planinska reka, koja je dom brojnih riba i divljih životinja. Prirodni izvori vode su poznati po svom kvalitetu.</p><h2>Flora i fauna</h2><p>Područje je dom raznovrsnog biljnog i životinjskog sveta. U šumama žive srne, divlje svinje, lisice, a mogu se uočiti i retke vrste ptica.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'U svakom šetnji prirodom, čovek dobija mnogo više nego što je tražio.',
+        quoteAuthor: 'John Muir'
+      },
+      {
+        type: 'video',
+        videoUrl: 'https://www.youtube.com/watch?v=iyLdoQGBchQ',
+        videoProvider: 'youtube',
+        caption: 'Prirodne lepote Srbije'
       }
     ],
   },
@@ -170,6 +197,11 @@ export const blogPosts: BlogPost[] = [
         srcset: slika777,
         alt: 'Tradicionalna gozba',
         caption: 'Domaća jela i proizvodi'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Najbolja hrana je ona spremljena sa ljubavlju i deljena sa radošću.',
+        quoteAuthor: 'Tradicionalna kuharska mudrost'
       },
       {
         type: 'text',
@@ -212,6 +244,11 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'text',
         html: '<h2>Projekti očuvanja</h2><p>Pokrenute su inicijative za restauraciju najstarijih zgrada i njihovo pretvaranje u muzejski prostor i kulturne centre, kako bi se očuvalo nasleđe za buduće generacije.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Arhitektura je svedok istorije, a njeno očuvanje dug prema budućim generacijama.',
+        quoteAuthor: 'Branislav Kojić'
       }
     ],
   },
