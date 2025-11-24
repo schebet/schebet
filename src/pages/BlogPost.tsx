@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
+import { SocialShare } from "@/components/SocialShare";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -110,6 +111,15 @@ const BlogPost = () => {
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               {post.excerpt}
             </p>
+
+            {/* Social Share */}
+            <div className="mb-8 pb-8 border-b border-border">
+              <SocialShare 
+                url={`/blog/${post.id}`}
+                title={post.title}
+                description={post.excerpt}
+              />
+            </div>
 
             <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg mb-8">
               <img
