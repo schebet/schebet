@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
@@ -45,8 +46,34 @@ const BlogPost = () => {
     );
   }
 
+  const fullUrl = `${window.location.origin}/blog/${post.id}`;
+  const imageUrl = post.imageUrl.startsWith('http') 
+    ? post.imageUrl 
+    : `${window.location.origin}${post.imageUrl}`;
+
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>{post.title} - Selo Šebet</title>
+        <meta name="description" content={post.excerpt} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={fullUrl} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={imageUrl} />
+      </Helmet>
+
       <Navigation />
       <main className="flex-1">
         <article className="container mx-auto px-4 py-12 max-w-4xl">
