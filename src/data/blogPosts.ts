@@ -33,6 +33,74 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 8,
+    title: "Seoska zadruga i saradnja",
+    excerpt: "Kako seljani zajedno rade i pomažu jedni drugima. Priča o zajedništvu i solidarnosti u Šebetu...",
+    author: "Marko Petrović",
+    date: "26. novembar 2025",
+    category: "Ljudi",
+    imageUrl: slika777Url,
+    imageSrcSet: slika777,
+    ogImage: "/og-images/777.jpg",
+    content: [
+      {
+        type: 'text',
+        html: '<h2>Zajedništvo kao temelj</h2><p>U selu Šebet, <strong>zajedništvo nije samo reč - to je način života</strong>. Od davnina, seljani su znali da je <em>međusobna pomoć</em> ključ za opstanak i napredak cele zajednice.</p><p>Kroz sve generacije, ljudi su se okupljali na &quot;mobe&quot; - zajedničkim radovima gde se pomaže komšiji bez očekivanja materijalne nadoknade.</p>'
+      },
+      {
+        type: 'image',
+        src: slika777Url,
+        srcset: slika777,
+        alt: 'Seoska zajednica na radu',
+        caption: 'Zajednički rad seljana tokom žetve'
+      },
+      {
+        type: 'text',
+        html: '<h2>Moba - tradicija koja traje</h2><p>Moba je stara seoska tradicija gde se ljudi okupljaju da pomognu u velikim poslovima:</p><ul><li><strong>Žetva i vršidba</strong> - najvažniji poslovi u leto</li><li><strong>Branje kukuruza</strong> - jesenja okupljanja uz priče i smeh</li><li><strong>Gradnja kuća</strong> - celo selo dolazi da pomogne</li><li><strong>Sečenje drva</strong> - priprema za zimu</li></ul><p>Ova tradicija i danas živi u Šebetu, povezujući generacije i čuvajući duh zajedništva.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Sam ideš brže, zajedno ideš dalje.',
+        quoteAuthor: 'Afrička poslovica'
+      },
+      {
+        type: 'text',
+        html: '<h2>Moderna seoska zadruga</h2><p>Danas u Šebetu postoji <strong>aktivna zemljoradnička zadruga</strong> koja:</p><ol><li>Omogućava zajedničku kupovinu opreme i mašina</li><li>Organizuje zajedničku prodaju proizvoda</li><li>Pomaže u dobijanju povoljnih kredita</li><li>Spaja seljake sa kupcima i izvoznicima</li></ol><p>Zahvaljujući zadruzi, čak i mala domaćinstva mogu pristupiti modernoj mehanizaciji i tržištu.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko1Url,
+        srcset: rimsko1,
+        alt: 'Zadrugari na sastanku',
+        caption: 'Godišnja skupština seoske zadruge'
+      },
+      {
+        type: 'text',
+        html: '<h2>Solidarnost u teškim trenucima</h2><p>Najlepši primeri zajedništva se vide kada neko od seljana doživi <strong>nepriliku ili nesreću</strong>:</p><blockquote>Kada je porodica Jovanović prošle godine izgubila štalu u požaru, celo selo se odmah organizovalo. Za mesec dana izgradili su novu štalu, skupili novac i donirali stoku. Ni jedna porodica u Šebetu ne ostaje sama u nevolji.</blockquote><p>Ovakvi primeri nisu retkost - oni su svakodnevica koja pokazuje pravu vrednost zajednice.</p>'
+      },
+      {
+        type: 'quote',
+        quoteText: 'Dobro selo nije ono sa lepim kućama, već ono sa dobrim ljudima.',
+        quoteAuthor: 'Narodna izreka'
+      },
+      {
+        type: 'text',
+        html: '<h2>Mladi nastavljaju tradiciju</h2><p>Nova generacija seljana <em>ne napušta</em> principe zajedništva, već ih prilagođava savremenom dobu:</p><ul><li>Preko društvenih mreža organizuju <strong>zajedničke akcije</strong></li><li>Dele znanja i iskustva kroz <strong>online grupe</strong></li><li>Pokreću <strong>inovativne projekte</strong> poput zajedničkih plastenika</li><li>Kombinuju staro i novo - <strong>tradicija i inovacija</strong></li></ul><p>Tako selo Šebet ostaje primer kako tradicija i moderna mogu ići ruku pod ruku.</p>'
+      },
+      {
+        type: 'image',
+        src: rimsko2Url,
+        srcset: rimsko2,
+        alt: 'Mladi seljaci',
+        caption: 'Nova generacija čuva tradicije i unosi nove ideje'
+      },
+      {
+        type: 'text',
+        html: '<h2>Zaključak</h2><p>Seoska zadruga i saradnja u Šebetu nisu relikt prošlosti - oni su <strong>živa stvarnost</strong> koja čini ovo selo posebnim.</p><p>U vreme kada mnogi govore o individualizmu i otuđenosti, Šebet pokazuje da zajedništvo i solidarnost nisu izgubljene vrednosti.</p><p><em>Selo Šebet je dokaz da zajedno možemo više, bolje i srećnije!</em></p>'
+      }
+    ],
+  },
+  {
     id: 7,
     title: "Šablon",
     excerpt: "Ovo je početni blog post koji služi kao šablon. Kopirajte i prilagodite sadržaj prema vašim potrebama...",
@@ -171,503 +239,8 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'text',
-<!doctype html>
-<html lang="sr">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeremija – Seoska Slava i Litija u Srbiji</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <style>
-        body {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2c2c2c;
-            background: #f8f6f3;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .page-wrapper {
-            width: 100%;
-            min-height: 100%;
-        }
-
-        /* Hero sekcija */
-        .hero {
-            width: 100%;
-            background: linear-gradient(135deg, #8b6f47 0%, #5d4e37 100%);
-            color: #fff;
-            padding: 80px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '✦';
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 40px;
-            opacity: 0.3;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin: 0 0 20px 0;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero p {
-            font-size: 22px;
-            margin: 0;
-            font-style: italic;
-            opacity: 0.95;
-        }
-
-        /* Container za sadržaj */
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        /* Sekcije */
-        .content-section {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 50px 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .section-title {
-            font-size: 36px;
-            color: #8b6f47;
-            margin: 0 0 30px 0;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #d4af37;
-            font-weight: 600;
-        }
-
-        .section-text {
-            font-size: 18px;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        /* Placeholder za slike */
-        .image-placeholder {
-            width: 100%;
-            height: 350px;
-            background: linear-gradient(135deg, #e8dcc8 0%, #d4c4a8 100%);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 30px 0;
-            border: 2px dashed #8b6f47;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-placeholder::before {
-            content: '🖼️';
-            font-size: 60px;
-            margin-bottom: 15px;
-            opacity: 0.6;
-        }
-
-        .image-label {
-            font-size: 16px;
-            color: #5d4e37;
-            font-weight: 600;
-            text-align: center;
-            padding: 0 20px;
-            font-style: italic;
-        }
-
-        /* Lista */
-        .custom-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .custom-list li {
-            padding: 12px 0 12px 35px;
-            position: relative;
-            font-size: 18px;
-        }
-
-        .custom-list li::before {
-            content: '✦';
-            position: absolute;
-            left: 0;
-            color: #d4af37;
-            font-size: 20px;
-        }
-
-        /* Grid za dve kolone */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .column-box {
-            background: #faf8f5;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #8b6f47;
-        }
-
-        .column-box h3 {
-            color: #8b6f47;
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-        /* Highlight box */
-        .highlight-box {
-            background: #fff9e6;
-            border-left: 5px solid #d4af37;
-            padding: 25px 30px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-size: 19px;
-            font-weight: 500;
-            color: #5d4e37;
-        }
-
-        /* Footer */
-        .footer {
-            width: 100%;
-            background: #5d4e37;
-            color: #e8dcc8;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-
-        .footer p {
-            margin: 0;
-            font-size: 16px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .content-section {
-                padding: 30px 20px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .section-text {
-                font-size: 16px;
-            }
-
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-
-            .image-placeholder {
-                height: 250px;
-            }
-        }
-    </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body>
-  <div class="page-wrapper"><!-- Hero sekcija -->
-   <header class="hero">
-    <h1 id="main-title">Jeremija – seoska slava i litija u Srbiji</h1>
-    <p id="hero-subtitle">Tradicija, vera i zajedništvo srpskog sela</p>
-   </header>
-   <main class="main-container"><!-- Uvod -->
-    <section class="content-section">
-     <h2 class="section-title" id="intro-title">Uvod</h2>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Fotografija srpskog sela u proleće<br>
-       (zelene livade, brda, crkva u daljini)
-      </div>
-     </div>
-     <p class="section-text">Jeremija je stara seoska slava i litija koja se obeležava u pojedinim krajevima Srbije, najčešće u proleće, posle Uskrsa.</p>
-     <p class="section-text">Ovaj dan je posvećen zaštiti sela, njiva i domaćinstava, ali i molitvi za zdravlje ljudi, stoke i dobar rod.</p>
-     <p class="section-text">Kroz litiju – svečanu povorku sa krstom, barjacima i ikonama – stanovnici sela obilaze polja i važne tačke u ataru, tražeći Božji blagoslov i zaštitu od nepogoda.</p>
-    </section><!-- Ko je Jeremija -->
-    <section class="content-section">
-     <h2 class="section-title" id="who-title">Ko je Jeremija?</h2>
-     <p class="section-text">Iako u kalendaru nema posebne, široko rasprostranjene crkvene svetkovine pod imenom Jeremija kao sveca-krsne slave, u narodnoj tradiciji kod nas se pod nazivom <strong>Jeremija</strong> često podrazumeva:</p>
-     <ul class="custom-list">
-      <li>narodni običaj vezan za <strong>prolećno vreme i zaštitu od zla</strong></li>
-      <li>dan kada se u nekim krajevima prave <strong>zavetine i litije</strong>, tj. zavetni dan sela</li>
-      <li>u pojedinim mestima povezuje se sa <strong>svetim prorokom Jeremijom</strong> ili, šire, sa molitvom za zaštitu od bolesti, vremenskih nepogoda i štetočina</li>
-     </ul>
-     <div class="highlight-box">
-      <p>Zato se Jeremija doživljava više kao <strong>seoska slava / zavetina</strong>, nego kao lična krsna slava.</p>
-     </div>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Ilustracija starog zapisa<br>
-       (drvo sa urezanim krstom ili ikona proroka)
-      </div>
-     </div>
-    </section><!-- Kada se slavi -->
-    <section class="content-section">
-     <h2 class="section-title" id="when-title">Kada se slavi Jeremija?</h2>
-     <p class="section-text">Datum obeležavanja Jeremije <strong>razlikuje se od sela do sela</strong>, jer je u pitanju lokalna zavetina:</p>
-     <ul class="custom-list">
-      <li>u nekim mestima se slavi <strong>u maju</strong>, često u periodu posle Uskrsa</li>
-      <li>negde se veže za <strong>određenu nedelju u godini</strong> kada se već tradicionalno izlazi u litiju</li>
-      <li>datum najčešće čuva <strong>lokalna crkva ili najstariji meštani</strong></li>
-     </ul>
-     <p class="section-text">Zajedničko za većinu sela jeste da se Jeremija doživljava kao <strong>prolećni praznik</strong>, kada se priroda budi, kad se razmišlja o setvi, vremenu i rodu.</p>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Prolećni pejzaž<br>
-       (polje, njive, drveće u listanju, klas žita ili cvet)
-      </div>
-     </div>
-    </section><!-- Litija -->
-    <section class="content-section">
-     <h2 class="section-title" id="litija-title">Litija – srce seoske slave Jeremija</h2>
-     <p class="section-text">Centralni deo obeležavanja Jeremije jeste <strong>litija</strong> – svečana povorka vernika koja, uz sveštenika, nosi:</p>
-     <ul class="custom-list">
-      <li><strong>krst</strong></li>
-      <li><strong>barjake</strong> (zastave)</li>
-      <li><strong>ikone</strong></li>
-      <li>često i <strong>bogoslužbene knjige</strong> ili kandila</li>
-     </ul>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Povorka ljudi kroz selo<br>
-       (krst i barjak u prvom planu, crkva ili polje u pozadini)
-      </div>
-     </div>
-     <h3 style="color: #8b6f47; font-size: 26px; margin-top: 40px;">Kako izgleda litija?</h3>
-     <div class="two-column">
-      <div class="column-box">
-       <h3>1. Služba u crkvi</h3>
-       <p>Obično se prvo služi liturgija u seoskoj crkvi. Ako selo nema crkvu, narod se okuplja kod <strong>zapisa</strong> – velikog drveta sa urezanim krstom.</p>
-      </div>
-      <div class="column-box">
-       <h3>2. Kretanje kroz selo</h3>
-       <p>Nakon molitve, litija kreće kroz selo, zaustavljajući se na važnim mestima: raskrsnice puteva, kraj bunara ili izvora, na ulazu u njive ili vinograde.</p>
-      </div>
-      <div class="column-box">
-       <h3>3. Molitve i blagoslovi</h3>
-       <p>Na svakoj stanici sveštenik čita molitve za zdravlje ljudi i stoke, zaštitu od bolesti, dobar rod i povoljne vremenske prilike, mir u porodicama i selu.</p>
-      </div>
-      <div class="column-box">
-       <h3>4. Učešće meštana</h3>
-       <p>U litiji učestvuju deca i omladina u narodnoj nošnji, domaćini sa svečanim ikonama, žene koje nose sveće i bosiljak, stariji meštani koji pamte običaje i pesme.</p>
-      </div>
-     </div>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Detalj litije<br>
-       (ruke koje drže krst ili ikonu, ljudi u povorci)
-      </div>
-     </div>
-    </section><!-- Zavetina -->
-    <section class="content-section">
-     <h2 class="section-title" id="zavjet-title">Zavetina sela i zaštita</h2>
-     <p class="section-text">Jeremija se često slavi kao <strong>zavetina</strong> – dan kada je selo nekada davno:</p>
-     <ul class="custom-list">
-      <li>preživelo neku veliku nevolju (bolest, poplavu, sušu, rat)</li>
-      <li>ili se zavetovalo da će <strong>svake godine izlaziti u litiju i Bogu zahvaljivati</strong> ako ih sačuva</li>
-     </ul>
-     <div class="highlight-box">
-      <p>Zato se i danas u molitvama na Jeremiju naglašava zahvalnost za sve što selo ima, molba za zaštitu u godini koja dolazi i čuvanje mira, ljubavi i sloge među meštanima.</p>
-     </div>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Stariji i mlađi zajedno<br>
-       (porodična atmosfera, ruke u molitvi, selo u pozadini)
-      </div>
-     </div>
-    </section><!-- Običaji -->
-    <section class="content-section">
-     <h2 class="section-title" id="customs-title">Običaji za stolom i u domaćinstvu</h2>
-     <p class="section-text">Posle litije i molitve, običaj je da se narod <strong>okupi za trpezom</strong>:</p>
-     <ul class="custom-list">
-      <li>u porti crkve</li>
-      <li>u dvorištu domaćina čiji je red da primi goste</li>
-      <li>ili u seoskom domu / sali</li>
-     </ul>
-     <h3 style="color: #8b6f47; font-size: 26px; margin-top: 30px;">Trpeza na Jeremiju</h3>
-     <p class="section-text">Na stolu se obično nalaze:</p>
-     <ul class="custom-list">
-      <li>hleb, so i vino</li>
-      <li>domaća jela: supa, pečenje, pite, sirevi, proje</li>
-      <li>kolači i voće, u zavisnosti od godišnjeg doba</li>
-     </ul>
-     <p class="section-text">U nekim mestima se za Jeremiju sprema <strong>slavski kolač</strong> i <strong>žito (koljivo)</strong>, slično kao za krsnu slavu, dok se u drugim selima polaže više naglasak na <strong>zajednički ručak</strong> i gostoprimstvo.</p>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Rustičan sto sa tradicionalnom hranom<br>
-       (slavski kolač, sveća, vino, domaća jela)
-      </div>
-     </div>
-    </section><!-- Verovanja -->
-    <section class="content-section">
-     <h2 class="section-title" id="beliefs-title">Narodna verovanja vezana za Jeremiju</h2>
-     <p class="section-text">U vezi sa Jeremijom, u narodu postoje različita verovanja, koja se razlikuju od kraja do kraja. Neka od njih su:</p>
-     <ul class="custom-list">
-      <li>da <strong>ne valja raditi teške poslove</strong> na dan Jeremije, posebno one koji se smatraju "udarom" na prirodu (seča drveća, krčenje šume)</li>
-      <li>da će <strong>godina biti bolja</strong> ako se litija održi bez svađe, nereda i lošeg vremena</li>
-      <li>da litija <strong>štiti selo od grada, oluje i štetočina</strong> na usevima</li>
-      <li>da je važno da <strong>cela porodica prisustvuje</strong> bar delu obreda, radi zajedničkog blagoslova</li>
-     </ul>
-     <div class="highlight-box">
-      <p>Ova verovanja nisu zvanični deo crkvenog učenja, već deo <strong>bogatog narodnog predanja</strong>, koje se prepliće sa pravoslavnom tradicijom.</p>
-     </div>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Simbolična ilustracija<br>
-       (oblak nad selom, iznad njega krst ili svetlost, polje žita)
-      </div>
-     </div>
-    </section><!-- Značaj danas -->
-    <section class="content-section">
-     <h2 class="section-title" id="today-title">Značaj Jeremije danas</h2>
-     <p class="section-text">I danas, u vremenu brzih promena i odlaska mladih iz sela, obeležavanje Jeremije:</p>
-     <ul class="custom-list">
-      <li>čuva <strong>identitet i sećanje</strong> na pretke</li>
-      <li>podseća da je selo zajednica, a ne samo skup kuća</li>
-      <li>okuplja rodbinu koja dolazi iz grada na "svoj" praznik</li>
-      <li>povezuje tradiciju, veru i svakodnevni život</li>
-     </ul>
-     <p class="section-text">Za mnoge, Jeremija je dan kada se:</p>
-     <ul class="custom-list">
-      <li>sreću rođaci koje dugo nisu videli</li>
-      <li>obnavljaju prijateljstva</li>
-      <li>prenose priče i običaji na najmlađe</li>
-     </ul>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Grupa ljudi ispred crkve<br>
-       (različite generacije, deca koja trče ili nose buketiće cveća)
-      </div>
-     </div>
-    </section><!-- Zaključak -->
-    <section class="content-section">
-     <h2 class="section-title">Zaključak</h2>
-     <p class="section-text">Jeremija, kao seoska slava i litija, predstavlja spoj <strong>pravoslavne molitve, narodnih običaja i tradicije sela</strong>.</p>
-     <p class="section-text">Iako se ne obeležava svuda i datumi mogu da se razlikuju, poruka je svuda slična:</p>
-     <ul class="custom-list">
-      <li>da se <strong>zatraži Božji blagoslov za selo</strong></li>
-      <li>da se <strong>zahvali za sve što je dato</strong></li>
-      <li>i da se <strong>sačuva zajedništvo i vera</strong></li>
-     </ul>
-     <div class="highlight-box">
-      <p>Čuvanjem i obeležavanjem Jeremije, čuvamo i <strong>sećanje na svoje korene</strong> i način života koji je vekovima oblikovao srpsko selo.</p>
-     </div>
-     <div class="image-placeholder">
-      <div class="image-label">
-       📷 Zalazak sunca nad selom<br>
-       (silueta crkve ili krsta, plamen sveće ili ikona u prvom planu)
-      </div>
-     </div>
-    </section>
-   </main><!-- Footer -->
-   <footer class="footer">
-    <p id="footer-text">© 2024 Jeremija – Seoska slava i litija | Čuvanje tradicije srpskog sela</p>
-   </footer>
-  </div>
-  <script>
-        const defaultConfig = {
-            main_title: "Jeremija – seoska slava i litija u Srbiji",
-            hero_subtitle: "Tradicija, vera i zajedništvo srpskog sela",
-            intro_title: "Uvod",
-            who_title: "Ko je Jeremija?",
-            when_title: "Kada se slavi Jeremija?",
-            litija_title: "Litija – srce seoske slave Jeremija",
-            zavjet_title: "Zavetina sela i zaštita",
-            customs_title: "Običaji za stolom i u domaćinstvu",
-            beliefs_title: "Narodna verovanja vezana za Jeremiju",
-            today_title: "Značaj Jeremije danas",
-            footer_text: "© 2024 Jeremija – Seoska slava i litija | Čuvanje tradicije srpskog sela"
-        };
-
-        async function onConfigChange(config) {
-            document.getElementById('main-title').textContent = config.main_title || defaultConfig.main_title;
-            document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-            document.getElementById('intro-title').textContent = config.intro_title || defaultConfig.intro_title;
-            document.getElementById('who-title').textContent = config.who_title || defaultConfig.who_title;
-            document.getElementById('when-title').textContent = config.when_title || defaultConfig.when_title;
-            document.getElementById('litija-title').textContent = config.litija_title || defaultConfig.litija_title;
-            document.getElementById('zavjet-title').textContent = config.zavjet_title || defaultConfig.zavjet_title;
-            document.getElementById('customs-title').textContent = config.customs_title || defaultConfig.customs_title;
-            document.getElementById('beliefs-title').textContent = config.beliefs_title || defaultConfig.beliefs_title;
-            document.getElementById('today-title').textContent = config.today_title || defaultConfig.today_title;
-            document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
-        }
-
-        function mapToCapabilities(config) {
-            return {
-                recolorables: [],
-                borderables: [],
-                fontEditable: undefined,
-                fontSizeable: undefined
-            };
-        }
-
-        function mapToEditPanelValues(config) {
-            return new Map([
-                ["main_title", config.main_title || defaultConfig.main_title],
-                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
-                ["intro_title", config.intro_title || defaultConfig.intro_title],
-                ["who_title", config.who_title || defaultConfig.who_title],
-                ["when_title", config.when_title || defaultConfig.when_title],
-                ["litija_title", config.litija_title || defaultConfig.litija_title],
-                ["zavjet_title", config.zavjet_title || defaultConfig.zavjet_title],
-                ["customs_title", config.customs_title || defaultConfig.customs_title],
-                ["beliefs_title", config.beliefs_title || defaultConfig.beliefs_title],
-                ["today_title", config.today_title || defaultConfig.today_title],
-                ["footer_text", config.footer_text || defaultConfig.footer_text]
-            ]);
-        }
-
-        if (window.elementSdk) {
-            window.elementSdk.init({
-                defaultConfig,
-                onConfigChange,
-                mapToCapabilities,
-                mapToEditPanelValues
-            });
-        }
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a4088c7e0963267',t:'MTc2NDA2NzI5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>      },
+        html: '<h2>Godišnji običaji</h2><p>Selo Šebet neguje bogatu tradiciju kulturnih i verskih praznika koji se slave tokom cele godine. Ove svečanosti okupljaju zajednicu i prenose tradiciju sa kolena na koleno.</p>'
+      },
       {
         type: 'image',
         src: slika777Url,
