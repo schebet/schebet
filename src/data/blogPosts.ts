@@ -1,5 +1,5 @@
-// This file now imports blog posts from Markdown files
-// All blog posts are stored in src/content/blog/ as individual .md files
+// This file now imports blog posts from separate TypeScript files
+// All blog posts are stored in src/data/posts/ as individual .ts files
 
 export interface ContentBlock {
   type: 'text' | 'image' | 'video' | 'quote';
@@ -24,15 +24,14 @@ export interface BlogPost {
   imageUrl: string;
   imageSrcSet: string;
   ogImage: string;
-  content: string; // Now contains markdown content instead of ContentBlock[]
-  slug?: string;
+  content: ContentBlock[];
 }
 
-// Import blog posts from markdown files
-import { blogPosts as loadedPosts } from '@/lib/markdownLoader';
+// Import blog posts from posts folder
+import { allPosts } from './posts';
 
 // Export the loaded posts
-export const blogPosts: BlogPost[] = loadedPosts;
+export const blogPosts: BlogPost[] = allPosts;
 
 // Helper function to get category colors
 export const getCategoryColor = (category: string) => {
