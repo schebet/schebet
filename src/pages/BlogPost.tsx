@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { SocialShare } from "@/components/SocialShare";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { MarkdownContent } from "@/components/MarkdownContent";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -128,7 +127,90 @@ const BlogPost = () => {
             </AspectRatio>
           </div>
 
-          <MarkdownContent content={post.content} />
+          <div 
+            className="prose prose-lg max-w-none animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            {post.content.map((block, index) => {
+              if (block.type === 'text') {
+                return (
+                  <div 
+                    key={index}
+                    dangerouslySetInnerHTML={{ __html: block.html || '' }}
+                  />
+                );
+              }
+              
+              if (block.type === 'image') {
+                return (
+                  <figure key={index} className="my-8">
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg">
+                      <img
+                        src={block.src}
+                        srcSet={block.srcset}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 768px, 896px"
+                        alt={block.alt}
+                        loading="lazy"
+                        className="object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                    {block.caption && (
+                      <figcaption className="text-sm text-muted-foreground text-center mt-3 italic">
+                        {block.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
+
+              if (block.type === 'video') {
+                const getEmbedUrl = () => {
+                  if (block.videoProvider === 'youtube') {
+                    const videoId = block.videoUrl?.split('v=')[1]?.split('&')[0];
+                    return `https://www.youtube.com/embed/${videoId}`;
+                  }
+                  if (block.videoProvider === 'vimeo') {
+                    const videoId = block.videoUrl?.split('/').pop();
+                    return `https://player.vimeo.com/video/${videoId}`;
+                  }
+                  return block.videoUrl;
+                };
+
+                return (
+                  <figure key={index} className="my-8">
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg bg-muted">
+                      <iframe
+                        src={getEmbedUrl()}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </AspectRatio>
+                    {block.caption && (
+                      <figcaption className="text-sm text-muted-foreground text-center mt-3 italic">
+                        {block.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
+
+              if (block.type === 'quote') {
+                return (
+                  <blockquote key={index} className="my-8 border-l-4 border-primary pl-6 py-4 italic">
+                    <p className="text-xl text-foreground mb-2">{block.quoteText}</p>
+                    {block.quoteAuthor && (
+                      <footer className="text-sm text-muted-foreground not-italic">
+                        — {block.quoteAuthor}
+                      </footer>
+                    )}
+                  </blockquote>
+                );
+              }
+              
+              return null;
+            })}
+          </div>
         </article>
 
 
