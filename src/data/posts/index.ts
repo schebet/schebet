@@ -1,3 +1,4 @@
+import { testPost } from './test';
 import { post8 } from './post-8';
 import { post7 } from './post-7';
 import { post1 } from './post-1';
@@ -10,6 +11,7 @@ import type { BlogPost } from '../blogPosts';
 
 // Automatski prikupi sve postove
 export const allPosts: BlogPost[] = [
+  testPost,
   post8,
   post7,
   post1,
