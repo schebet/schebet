@@ -60,6 +60,8 @@ const BlogPost = () => {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content={fullUrl} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
